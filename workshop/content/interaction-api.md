@@ -32,14 +32,12 @@ Let's interact with the Kubernetes API. This introduces you to an alternate way 
     curl http://localhost:8080/api/ | jq
     ```
 
-    4. Without kubectl proxy
+4. Without kubectl proxy
     
     It is possible to avoid using kubectl proxy by passing an authentication token directly to the API server, like this Using jsonpath approach:
 
     ```execute-2
     APISERVER=$(kubectl config view --minify -o jsonpath='{.clusters[0].cluster.server}')
-
     TOKEN=$(kubectl get secret $(kubectl get serviceaccount default -o jsonpath='{.secrets[0].name}') -o jsonpath='{.data.token}' | base64 --decode )
-
     curl $APISERVER/api --header "Authorization: Bearer $TOKEN" --insecure | jq
     ```
