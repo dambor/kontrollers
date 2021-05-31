@@ -8,6 +8,6 @@ spec:
       type: anonymous
   workshops:
   - name: kontrollers
-    capacity: 1
+    capacity: 10
     expires: 60m
     orphaned: 5m
