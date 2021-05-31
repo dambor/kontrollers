@@ -4,7 +4,10 @@ modules:
         exit_sign: Start Workshop
     interaction-api:
         name: Interaction with Kubernetes API
-        exit_sign: Start Workshop
+        exit_sign: Next
+    programmatic-access:
+        name: Interacting programmatically
+        exit_sign: Next
     exercises/01-sample-content:
         name: Sample Content
     workshop-summary:
