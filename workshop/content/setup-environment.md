@@ -1,6 +1,32 @@
-Include in this page any steps which should be run by a user to check that the workshop environment is setup correctly. Exactly what you provide in this step will depend on whether the workshop is designed to be deployed in a specific way.
+# Interaction with the Kubernetes API
 
-It is a good idea in this page to provide at least one sample command to run which is marked with the `execute` annotation so anyone doing the workshop understands they can click on marked commands to run them. For example:
+Let's interact with the Kubernetes API. This introduces you to an alternate way to affect clusters that doesn't use kubectl. We're going to use curl to do some of the same things kubectl commands might do.
+
+## Accessing for the first time with kubectl
+
+When accessing the Kubernetes API for the first time, use the Kubernetes command-line tool, kubectl.
+
+Check the location and credentials that kubectl knows about with this command:
+
+```execute
+kubectl config view
+```
+
+
+
+
+* Follow this tutorial
+* Run curl <url>/api/ and see it return information about your cluster
+
+## Bonus
+
+Create a deployment using a curl command
+
+Helpful Links
+📚 Kubernetes API concepts
+📚 Kubernetes API Reference. The Kubernetes API Reference vX.X link has example API requests.
+Suggested Timebox
+1 hour
 
 ```execute
 date
