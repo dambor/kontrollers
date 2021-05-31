@@ -29,22 +29,17 @@ Let's interact with the Kubernetes API. This introduces you to an alternate way 
     Then you can explore the API with curl, wget, or a browser, like so:
 
     ```execute-2
-    curl http://localhost:8080/api/
+    curl http://localhost:8080/api/ | jq
     ```
 
+    4. Without kubectl proxy
+    
+    It is possible to avoid using kubectl proxy by passing an authentication token directly to the API server, like this Using jsonpath approach:
 
-## Bonus
+    ```execute-2
+    APISERVER=$(kubectl config view --minify -o jsonpath='{.clusters[0].cluster.server}')
 
-Create a deployment using a curl command
+    TOKEN=$(kubectl get secret $(kubectl get serviceaccount default -o jsonpath='{.secrets[0].name}') -o jsonpath='{.data.token}' | base64 --decode )
 
-Helpful Links
-📚 Kubernetes API concepts
-📚 Kubernetes API Reference. The Kubernetes API Reference vX.X link has example API requests.
-Suggested Timebox
-1 hour
-
-```execute
-date
-```
-
-Did you type the command in yourself? If you did, click on the command instead and you will find that it is executed for you. You can click on any command which has the <span class="fas fa-running"></span> icon shown to the right of it, and it will be copied to the interactive terminal and run. If you would rather make a copy of the command so you can paste it to another window, hold down the shift key when you click on the command.
+    curl $APISERVER/api --header "Authorization: Bearer $TOKEN" --insecure | jq
+    ```

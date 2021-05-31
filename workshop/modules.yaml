@@ -1,7 +1,7 @@
 modules:
     workshop-overview:
         name: Workshop Overview
-        exit_sign: Setup Environment
+        exit_sign: Start Workshop
     interaction-api:
         name: Interaction with Kubernetes API
         exit_sign: Start Workshop
