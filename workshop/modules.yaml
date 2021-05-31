@@ -2,8 +2,8 @@ modules:
     workshop-overview:
         name: Workshop Overview
         exit_sign: Setup Environment
-    setup-environment:
-        name: Setup Environment
+    interaction-api:
+        name: Interaction with Kubernetes API
         exit_sign: Start Workshop
     exercises/01-sample-content:
         name: Sample Content
