@@ -4,5 +4,6 @@ modules:
     activate:
     - workshop-overview
     - interaction-api
+    - programmatic-access
     - exercises/01-sample-content
     - workshop-summary
