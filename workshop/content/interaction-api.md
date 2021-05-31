@@ -22,13 +22,13 @@ Let's interact with the Kubernetes API. This introduces you to an alternate way 
     
     The following command runs kubectl in a mode where it acts as a reverse proxy. It handles locating the API server and authenticating. Run it like this:
     
-    ```execute
+    ```execute-1
     kubectl proxy --port=8080 &
     ```
 
     Then you can explore the API with curl, wget, or a browser, like so:
 
-    ```execute
+    ```execute-2
     curl http://localhost:8080/api/
     ```
 
