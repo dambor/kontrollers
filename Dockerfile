@@ -10,3 +10,5 @@ RUN HOME=/root && \
     dnf install -y --setopt=tsflags=nodocs go
 
 RUN fix-permissions /home/eduk8s
+
+USER 1001
