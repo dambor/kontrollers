@@ -4,8 +4,10 @@ metadata:
   name: kontrollers
 spec:
   portal:
-    registration:
-      type: anonymous
+    credentials:
+      admin:
+        username: educates
+        password: educates
   workshops:
   - name: kontrollers
     capacity: 10
