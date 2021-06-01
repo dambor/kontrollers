@@ -11,6 +11,7 @@ spec:
   url: https://github.com/dambor/kontrollers
   content:
     #image: quay.io/eduk8s/lab-markdown-sample:master
+    image: projects.registry.vmware.com/educates/go-environment
     files: github.com/dambor/kontrollers
   session:
     namespaces:
