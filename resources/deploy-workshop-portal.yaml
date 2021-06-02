@@ -33,11 +33,11 @@ spec:
   portal:
     credentials:
       admin:
-        username: educates
+        username: admin
         password: VMwar31!
-    registration:
-      type: one-step
-      enabled: false
+      robot:
+        username: robot-admin
+        password: VMwar31!
   workshops:
   - name: kontrollers
     capacity: 10
