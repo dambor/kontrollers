@@ -30,14 +30,6 @@ kind: TrainingPortal
 metadata:
   name: kontrollers
 spec:
-  portal:
-    credentials:
-      admin:
-        username: admin
-        password: VMwar31!
-      robot:
-        username: robot-admin
-        password: VMwar31!
   workshops:
   - name: kontrollers
     capacity: 10
