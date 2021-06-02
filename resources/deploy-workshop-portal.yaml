@@ -1,0 +1,45 @@
+apiVersion: training.eduk8s.io/v1alpha2
+kind: Workshop
+metadata:
+  name: kontrollers
+spec:
+  title: Kubernetes Controllers
+  description: A workshop about creating Kubernetes controllers
+  vendor: gdambor.com
+  difficulty: beginner
+  duration: 15m
+  url: https://github.com/dambor/kontrollers
+  content:
+    #image: quay.io/eduk8s/lab-markdown-sample:master
+    image: projects.registry.vmware.com/educates/go-environment
+    files: github.com/dambor/kontrollers
+  session:
+    namespaces:
+      budget: small
+    applications:
+      terminal:
+        enabled: true
+        layout: split
+      console:
+        enabled: true
+      editor:
+        enabled: true
+---
+apiVersion: training.eduk8s.io/v1alpha1
+kind: TrainingPortal
+metadata:
+  name: kontrollers
+spec:
+  portal:
+    credentials:
+      admin:
+        username: educates
+        password: VMwar31!
+    registration:
+      type: one-step
+      enabled: false
+  workshops:
+  - name: kontrollers
+    capacity: 10
+    expires: 60m
+    orphaned: 5m
